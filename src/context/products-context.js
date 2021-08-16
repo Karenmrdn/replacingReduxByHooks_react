@@ -35,7 +35,7 @@ const ProductsProvider = (props) => {
 
   const toggleFavorite = (id) => {
     setProductsList((prevProdList) => {
-      const prodIndex = productsList.findIndex((prod) => prod.id === id);
+      const prodIndex = prevProdList.findIndex((prod) => prod.id === id);
       const newFavStatus = !prevProdList[prodIndex].isFavorite;
       const updatedProducts = [...prevProdList];
       updatedProducts[prodIndex] = {
